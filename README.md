@@ -37,3 +37,5 @@ Aguarde o processo terminar. Quando a **logo do PhotoGIMP** aparecer na sua tela
 
 * Sistema Operacional Linux.
 * Suporte a **Flatpak** instalado no sistema.
+
+observação: o código foi feito pelo deepseek e fui mudando algumas coisas
