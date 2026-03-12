@@ -30,6 +30,8 @@ Você tem duas formas simples de rodar o instalador:
 ### 3. Finalização
 
 Aguarde o processo terminar. Quando a **logo do PhotoGIMP** aparecer na sua tela, a instalação foi concluída com sucesso! 🎉
+ou
+quando aparece a **notificação** falando que a instalação foi concluída
 
 <IMG src="https://raw.githubusercontent.com/Diolinux/PhotoGIMP/master/.config/GIMP/3.0/splashes/splash-screen-2025-v2.png">
 imagem que mostra que finalizou a instalação
