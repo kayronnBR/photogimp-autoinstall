@@ -16,18 +16,23 @@ O script realiza as seguintes etapas automaticamente:
 
 Siga os passos abaixo para realizar a instalação no Linux:
 
-### 1. Download e Extração
+ 1. Download e Extração
 
-Primeiro, faça o download do arquivo [PhotoGIMP-linux.tar.gz](https://github.com/kayronnBR/photogimp-autoinstall/raw/refs/heads/main/PhotoGIMP-linux.tar.gz). Após baixar, extraia o conteúdo da pasta.
+Primeiro, faça o download do arquivo [PhotoGIMP-linux.tar.gz](https://github.com/kayronnBR/photogimp-autoinstall/raw/refs/heads/main/PhotoGIMP-linux.tar.gz). 
+<h1>
+  <a href="https://github.com/kayronnBR/photogimp-autoinstall/raw/refs/heads/main/PhotoGIMP-linux.tar.gz">DOWNLOAD</a>
+</h1>
+ 
+Após baixar, extraia o conteúdo da pasta.
 
-### 2. Execução do Script
+ 2. Execução do Script
 
 Você tem duas formas simples de rodar o instalador:
 
 * **Via Terminal (Recomendado):** Abra o seu terminal e arraste o arquivo `autoinstall-photoGIMP.sh` para dentro da janela. Pressione `Enter`.
 * **Via Interface Gráfica:** Clique com o botão direito no arquivo `autoinstall-photoGIMP.sh`, selecionar "Executar".
 
-### 3. Finalização
+ 3. Finalização
 
 Aguarde o processo terminar. Quando a **logo do PhotoGIMP** aparecer na sua tela, a instalação foi concluída com sucesso! 🎉
 ou
