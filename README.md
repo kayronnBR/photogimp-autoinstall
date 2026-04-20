@@ -1,3 +1,6 @@
+# 🚧 TEMPORARIAMENTE INDISPONÍVEL
+tem um erro no script que esta quebrando o plug-in resynthesizer, vou tenta resolver para subir novamente no ar
+
 # 📸 PhotoGIMP Autoinstall
 
 Este script automatiza a transformação do seu GIMP em PhotoGIMP, facilitando a transição para usuários que vêm de outros editores de imagem.
