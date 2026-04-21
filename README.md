@@ -1,6 +1,3 @@
-# 🚧 TEMPORARIAMENTE INDISPONÍVEL
-tem um erro no script que esta quebrando o plug-in resynthesizer, vou tenta resolver para subir novamente no ar
-
 # 📸 PhotoGIMP Autoinstall
 
 Este script automatiza a transformação do seu GIMP em PhotoGIMP, facilitando a transição para usuários que vêm de outros editores de imagem.
@@ -23,7 +20,7 @@ Siga os passos abaixo para realizar a instalação no Linux:
 
 Primeiro, faça o download do arquivo [PhotoGIMP-linux.tar.gz](https://github.com/kayronnBR/photogimp-autoinstall/raw/refs/heads/main/PhotoGIMP-linux.tar.gz). 
 <h1>
-  <a href="https://github.com/kayronnBR/photogimp-autoinstall/raw/refs/heads/main/PhotoGIMP-linux.tar.gz">DOWNLOAD</a>
+  <a href="https://downgit.github.io/#/home?url=https://github.com/kayronnBR/photogimp-autoinstall/blob/main/PhotoGIMP-linux.tar.xz">DOWNLOAD</a>
 </h1>
  
 Após baixar, extraia o conteúdo da pasta.
