@@ -7,7 +7,6 @@ Este script automatiza a transformação do seu GIMP em PhotoGIMP, facilitando a
 O script realiza as seguintes etapas automaticamente:
 
 * ✅ Instala o **GIMP via Flatpak**.
-* ✅ Adiciona o plugin **Resynthesizer** (essencial para ferramentas como o "Heal Selection").
 * ✅ Aplica o patch do **PhotoGIMP** (organização de menus, atalhos e interface).
 
 ---
