@@ -17,7 +17,7 @@ Siga os passos abaixo para realizar a instalação no Linux:
 
  1. Download e Extração
 
-Primeiro, faça o download do arquivo [PhotoGIMP-linux.tar.gz](https://github.com/kayronnBR/photogimp-autoinstall/raw/refs/heads/main/PhotoGIMP-linux.tar.gz). 
+Primeiro, faça o download do arquivo PhotoGIMP-linux.tar.gx
 <h1>
   <a href="https://downgit.github.io/#/home?url=https://github.com/kayronnBR/photogimp-autoinstall/blob/main/PhotoGIMP-linux.tar.xz">DOWNLOAD</a>
 </h1>
