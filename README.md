@@ -5,8 +5,6 @@ Este script automatiza a transformação do seu GIMP em PhotoGIMP, facilitando a
 ## ✨ O que este instalador faz?
 
 O script realiza as seguintes etapas automaticamente:
-
-* ✅ Instala o **GIMP via Flatpak**.
 * ✅ Aplica o patch do **PhotoGIMP** (organização de menus, atalhos e interface).
 
 ---
@@ -17,14 +15,17 @@ Siga os passos abaixo para realizar a instalação no Linux:
 
  1. Download e Extração
 
-Primeiro, faça o download do arquivo PhotoGIMP-linux.tar.gx
+Primeiro, faça o download do arquivo PhotoGIMP-linux.tar.xz
 <h1>
   <a href="https://downgit.github.io/#/home?url=https://github.com/kayronnBR/photogimp-autoinstall/blob/main/PhotoGIMP-linux.tar.xz">DOWNLOAD</a>
 </h1>
  
 Após baixar, extraia o conteúdo da pasta.
 
- 2. Execução do Script
+ 2. instale o gimp em flatpak
+ `flatpak install flathub org.gimp.GIMP`
+
+ abra o gimp e espere ele criar os arquivos, quando finalizar feche o gimp e rode o script autoinstall-photoGIMP.sh
 
 Você tem duas formas simples de rodar o instalador:
 
@@ -32,17 +33,7 @@ Você tem duas formas simples de rodar o instalador:
 * **Via Interface Gráfica:** Clique com o botão direito no arquivo `autoinstall-photoGIMP.sh`, selecionar "Executar".
 
  3. Finalização
-
-Aguarde o processo terminar. Quando a **logo do PhotoGIMP** aparecer na sua tela, a instalação foi concluída com sucesso! 🎉
-ou
-quando aparece a **notificação** falando que a instalação foi concluída
-
-<IMG src="https://raw.githubusercontent.com/Diolinux/PhotoGIMP/master/.config/GIMP/3.0/splashes/splash-screen-2025-v2.png">
-imagem que mostra que finalizou a instalação
-
----
-
-## ⚠️ Requisitos
+ ele manda um notificação avisando que finalizou
 
 * Sistema Operacional Linux.
 * Suporte a **Flatpak** instalado no sistema.
