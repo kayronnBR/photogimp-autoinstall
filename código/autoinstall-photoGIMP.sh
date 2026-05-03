@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # ==============================================
-# PHOTOGIMP - APENAS CÓPIA DE CONFIGURAÇÕES
+# PHOTOGIMP - APENAS CÓPIA DE CONFIGURAÇÕES + NOTIFICAÇÃO
 # ==============================================
 
 # Diretório onde o script está sendo executado
@@ -37,5 +37,10 @@ cp -rf "$PASTA_ATUAL/.local"/* "$HOME/.local/" 2>/dev/null
 # 6. Ajustar permissões
 chmod -R 755 "$HOME/.config/GIMP" 2>/dev/null
 chmod -R 755 "$HOME/.local/share/gimp" 2>/dev/null
+
+# 7. Notificação Final
+if command -v notify-send &> /dev/null; then
+    notify-send "PhotoGIMP" "🎉 Instalação concluída com sucesso!" --icon=gimp
+fi
 
 echo "✅ Concluído! A interface foi aplicada."
