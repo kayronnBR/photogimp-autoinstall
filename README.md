@@ -1,41 +1,59 @@
-# 📸 PhotoGIMP Autoinstall
+# 🚀 PhotoGIMP Automated Installer & GMic Plugin Setup
 
-Este script automatiza a transformação do seu GIMP em PhotoGIMP, facilitando a transição para usuários que vêm de outros editores de imagem.
+Este repositório contém um script Bash automatizado e inteligente para instalar, configurar e otimizar a experiência do **GIMP** no Linux, aplicando o patch **PhotoGIMP** (projeto criado pela comunidade [Diolinux](https://github.com/Diolinux/PhotoGIMP)) e instalando automaticamente o plugin de efeitos **G'MIC**.
 
-## ✨ O que este instalador faz?
-
-O script realiza as seguintes etapas automaticamente:
-* ✅ Aplica o patch do **PhotoGIMP** (organização de menus, atalhos e interface).
+O **PhotoGIMP** transforma a interface e os atalhos do GIMP para ficarem o mais próximos e familiares possível do **Adobe Photoshop**, ideal para quem está migrando de sistema operacional ou busca maior produtividade na edição de imagens.
 
 ---
 
-## 🚀 Como Instalar
+## 📌 Funcionalidades do Script
 
-Siga os passos abaixo para realizar a instalação no Linux:
+- **Instalação Automática:** Configura o **Flatpak** e o repositório **Flathub** caso ainda não estejam ativos no sistema (compatível com Ubuntu, Debian, Fedora, Arch, Manjaro, etc.).
+- **Download do GIMP & G'MIC:** Baixa e instala a versão mais recente do GIMP via Flatpak e instala automaticamente a *branch* compatível do plugin `org.gimp.GIMP.Plugin.GMic`.
+- **Seleção Interativa com Timeout (10s):**
+  - **Modo 1 (Padrão):** Instalação limpa com barra de carregamento dinâmica (*spinner*) e console silencioso.
+  - **Modo 2:** Exibição detalhada de *logs* de saída no terminal.
+  - Se nenhuma opção for pressionada em 10 segundos, o modo silencioso é selecionado automaticamente.
+- **Notificações Desktop Multidistro:** Notificações em tempo real durante cada etapa do processo via `notify-send`, `gdbus` ou `kdialog` (testado no KDE Plasma, XFCE, GNOME e outros).
+- **Fechamento Inteligente:** Abre o GIMP temporariamente para gerar as pastas padrão de sistema, monitora a inicialização pelos *logs* e encerra o programa automaticamente assim que o perfil é carregado.
+- **Aplicação da Interface:** Aplica o patch PhotoGIMP copiando com segurança os arquivos das pastas `.config` e `.local` para o diretório do usuário (`$HOME`).
+- **Limpeza Segura:** Limpa arquivos temporários ao final do processo sem apagar dados indevidos do sistema.
 
- 1. Download e Extração
+---
 
-Primeiro, faça o download do arquivo PhotoGIMP-linux.tar.xz
-<h1>
-  <a href="https://downgit.github.io/#/home?url=https://github.com/kayronnBR/photogimp-autoinstall/blob/main/PhotoGIMP-linux.tar.xz">DOWNLOAD</a>
-</h1>
- 
-Após baixar, extraia o conteúdo da pasta.
+## 📂 Estrutura Necessária dos Ficheiros
 
- 2. instale o gimp em flatpak
- `flatpak install flathub org.gimp.GIMP`
+Para que o script funcione corretamente, ele deve estar localizado na **mesma pasta** que contém os diretórios extraídos do PhotoGIMP:
 
- abra o gimp e espere ele criar os arquivos, quando finalizar feche o gimp e rode o script autoinstall-photoGIMP.sh
+```text
+PhotoGIMP-linux/
+├── .config/            # Configurações de interface e atalhos
+├── .local/             # Pincéis, ícones e arquivos do usuário
+├── autoinstall-photoGIMP.sh  # Script de instalação automatizada
+└── README.md
+```
 
-Você tem duas formas simples de rodar o instalador:
+---
 
-* **Via Terminal (Recomendado):** Abra o seu terminal e arraste o arquivo `autoinstall-photoGIMP.sh` para dentro da janela. Pressione `Enter`.
-* **Via Interface Gráfica:** Clique com o botão direito no arquivo `autoinstall-photoGIMP.sh`, selecionar "Executar".
+## 🛠️ Como Utilizar
 
- 3. Finalização
- ele manda um notificação avisando que finalizou
+1. **Faça o download do PhotoGIMP** do repositório oficial ou extraia os arquivos compactados.
+2. Coloque o script `autoinstall-photoGIMP.sh` dentro da pasta onde se encontram as pastas `.config` e `.local`.
+3. Abra o terminal nessa pasta e dê permissão de execução ao script:
+   ```bash
+   chmod +x autoinstall-photoGIMP.sh
+   ```
+4. Execute o script:
+   ```bash
+   ./autoinstall-photoGIMP.sh
+   ```
+5. Aguarde o menu interativo ou deixe a contagem regressiva de 10 segundos iniciar o processo automático!
 
-* Sistema Operacional Linux.
-* Suporte a **Flatpak** instalado no sistema.
+---
 
-observação: o código foi feito pelo deepseek e fui mudando algumas coisas
+## 👥 Créditos e Agradecimentos
+
+- **PhotoGIMP Project:** Desenvolvido e mantido pela equipe [Diolinux](https://github.com/Diolinux).
+- **Repositório Oficial:** [GitHub - Diolinux/PhotoGIMP](https://github.com/Diolinux/PhotoGIMP)
+- **GIMP:** [gimp.org](https://www.gimp.org/)
+- **G'MIC Plugin:** [gmic.eu](https://gmic.eu/)
