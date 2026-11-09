@@ -1,8 +1,8 @@
-<h1>[DOWNLOAD](https://downgit.github.io/#/home?url=https://github.com/kayronnBR/photogimp-autoinstall/tree/main/instalador)</h1>
+<h1> [DOWNLOAD](https://downgit.github.io/#/home?url=https://github.com/kayronnBR/photogimp-autoinstall/tree/main/instalador) </h1>
 
 # 🚀 PhotoGIMP Automated Installer & GMic Plugin Setup
 
-Este repositório contém um script Bash automatizado e inteligente para instalar, configurar e otimizar a experiência do **GIMP** no Linux, aplicando o patch **PhotoGIMP** (projeto criado pela comunidade [Diolinux](https://github.com/Diolinux/PhotoGIMP)) e instalando automaticamente o plugin de efeitos **G'MIC**.
+Este repositório contém um script Bash automatizado e inteligente para instalar, configurar e otimizar a experiência do **GIMP** no Linux, aplicando o patch **PhotoGIMP** (projeto criado pela comunidade [Diolinux](https://github.com/Diolinux/PhotoGIMP) e instalando automaticamente o plugin de efeitos **G'MIC**.
 
 O **PhotoGIMP** transforma a interface e os atalhos do GIMP para ficarem o mais próximos e familiares possível do **Adobe Photoshop**, ideal para quem está migrando de sistema operacional ou busca maior produtividade na edição de imagens.
 
