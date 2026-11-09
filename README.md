@@ -3,6 +3,7 @@
 [DOWNLOAD📦](https://downgit.github.io/#/home?url=https://github.com/kayronnBR/photogimp-autoinstall/tree/main/instalador)
 </h1>
 
+[vídeo de demonstração](https://youtu.be/H9FAE80VVXI?is=yfEmJRwFMaQVeOHz)
 
 # 🚀 PhotoGIMP Automated Installer & GMic Plugin Setup
 
