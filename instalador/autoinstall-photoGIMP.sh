@@ -11,7 +11,7 @@ EXIBIR_LOGS=false
 enviar_notificacao_desktop() {
     local titulo="$1"
     local mensagem="$2"
-
+    
     if command -v notify-send &> /dev/null; then
         notify-send "$titulo" "$mensagem" --icon=gimp 2>/dev/null
     elif command -v gdbus &> /dev/null; then
@@ -44,7 +44,7 @@ executar_com_spinner() {
 enviar_notificacao() {
     local passo="$1"
     local mensagem="$2"
-
+    
     if [ "$EXIBIR_LOGS" = false ]; then
         clear
         echo "--------------------------------------------------"
@@ -59,7 +59,7 @@ enviar_notificacao() {
         echo "📌 [$passo] $mensagem"
         echo "=================================================="
     fi
-
+    
     enviar_notificacao_desktop "$passo" "$mensagem"
 }
 
@@ -162,15 +162,15 @@ while kill -0 $GIMP_PID 2>/dev/null; do
     if journalctl --user -t flatpak --since "1 minute ago" 2>/dev/null | grep -q "GIMP.*Initialization"; then
         break
     fi
-
+    
     if [ "$EXIBIR_LOGS" = false ]; then
         i=$(( (i+1) % 4 ))
         printf "\r    [%c] A iniciar o GIMP e a gerar perfis..." "${spin:$i:1}"
     fi
-
+    
     sleep 1
     TEMPO_ESPERA=$((TEMPO_ESPERA + 1))
-
+    
     if [ $TEMPO_ESPERA -ge $LIMITE_TEMPO ]; then
         break
     fi
@@ -224,25 +224,21 @@ else
 fi
 sleep 2
 
-# 6. Limpeza automática segura da pasta de instalação
+# 6. Limpeza restrita e segura: remove apenas 'instalador' e 'instalador.zip' se existirem localmente
 enviar_notificacao "Passo 6/6" "Limpando ficheiros temporários de instalação..."
 if [ "$EXIBIR_LOGS" = true ]; then
     cd "$HOME"
-    if [[ "$PASTA_ATUAL" == *"PhotoGIMP"* ]] || [[ "$PASTA_ATUAL" == *"Download"* ]]; then
-        rm -rf "$PASTA_ATUAL"
-    else
-        rm -f -- "$0"
-    fi
+    [ -d "$PASTA_ATUAL/instalador" ] && rm -rf "$PASTA_ATUAL/instalador"
+    [ -f "$PASTA_ATUAL/instalador.zip" ] && rm -f "$PASTA_ATUAL/instalador.zip"
+    [[ "$PASTA_ATUAL" == *"/instalador"* ]] && rm -rf "$PASTA_ATUAL"
 else
     {
         cd "$HOME"
-        if [[ "$PASTA_ATUAL" == *"PhotoGIMP"* ]] || [[ "$PASTA_ATUAL" == *"Download"* ]]; then
-            rm -rf "$PASTA_ATUAL" > /dev/null 2>&1
-        else
-            rm -f -- "$0" > /dev/null 2>&1
-        fi
+        [ -d "$PASTA_ATUAL/instalador" ] && rm -rf "$PASTA_ATUAL/instalador" > /dev/null 2>&1
+        [ -f "$PASTA_ATUAL/instalador.zip" ] && rm -f "$PASTA_ATUAL/instalador.zip" > /dev/null 2>&1
+        [[ "$PASTA_ATUAL" == *"/instalador"* ]] && rm -rf "$PASTA_ATUAL" > /dev/null 2>&1
     } &
-    executar_com_spinner "A remover ficheiros de instalação" $!
+    executar_com_spinner "A remover a pasta 'instalador' e 'instalador.zip'" $!
 fi
 
 # Notificação Final
