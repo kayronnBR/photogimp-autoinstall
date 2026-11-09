@@ -24,16 +24,8 @@ O **PhotoGIMP** transforma a interface e os atalhos do GIMP para ficarem o mais 
 ## 🛠️ Como Utilizar
 
 1. **Faça o download do PhotoGIMP** do repositório oficial ou extraia os arquivos compactados.
-2. Coloque o script `autoinstall-photoGIMP.sh` dentro da pasta onde se encontram as pastas `.config` e `.local`.
-3. Abra o terminal nessa pasta e dê permissão de execução ao script:
-   ```bash
-   chmod +x autoinstall-photoGIMP.sh
-   ```
-4. Execute o script:
-   ```bash
-   ./autoinstall-photoGIMP.sh
-   ```
-5. Aguarde o menu interativo ou deixe a contagem regressiva de 10 segundos iniciar o processo automático!
+2. araste o script `autoinstall-photoGIMP.sh` dentro do seu terminal e click enter.
+3. depois vai perguta se você quer modo limpo ou com logs, então você escolhe porque o resto já é automatico.
 
 ---
 
@@ -43,3 +35,4 @@ O **PhotoGIMP** transforma a interface e os atalhos do GIMP para ficarem o mais 
 - **Repositório Oficial:** [GitHub - Diolinux/PhotoGIMP](https://github.com/Diolinux/PhotoGIMP)
 - **GIMP:** [gimp.org](https://www.gimp.org/)
 - **G'MIC Plugin:** [gmic.eu](https://gmic.eu/)
+- **Google Gemini:** quem fez o codigo [Google Gemini](https://gemini.google.com/?hl=pt-BR)
