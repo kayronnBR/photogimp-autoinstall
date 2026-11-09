@@ -1,4 +1,4 @@
-<h1> [DOWNLOAD](https://downgit.github.io/#/home?url=https://github.com/kayronnBR/photogimp-autoinstall/tree/main/instalador) </h1>
+[DOWNLOAD](https://downgit.github.io/#/home?url=https://github.com/kayronnBR/photogimp-autoinstall/tree/main/instalador)
 
 # 🚀 PhotoGIMP Automated Installer & GMic Plugin Setup
 
