@@ -21,20 +21,6 @@ O **PhotoGIMP** transforma a interface e os atalhos do GIMP para ficarem o mais 
 
 ---
 
-## 📂 Estrutura Necessária dos Ficheiros
-
-Para que o script funcione corretamente, ele deve estar localizado na **mesma pasta** que contém os diretórios extraídos do PhotoGIMP:
-
-```text
-PhotoGIMP-linux/
-├── .config/            # Configurações de interface e atalhos
-├── .local/             # Pincéis, ícones e arquivos do usuário
-├── autoinstall-photoGIMP.sh  # Script de instalação automatizada
-└── README.md
-```
-
----
-
 ## 🛠️ Como Utilizar
 
 1. **Faça o download do PhotoGIMP** do repositório oficial ou extraia os arquivos compactados.
