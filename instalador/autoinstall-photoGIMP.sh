@@ -208,7 +208,7 @@ else
         rm -rf "$HOME/.config/GIMP" > /dev/null 2>&1
         rm -rf "$HOME/.local/share/gimp" > /dev/null 2>&1
         cp -rf "$PASTA_ATUAL/.config"/* "$HOME/.config/" > /dev/null 2>&1
-        cp -rf "$PASTA_ATUAL/.local"/* "$HOME/.local/" > /dev/null 2>&1
+        cp -rf "$PASTA_ATUAL/.local"/* "$HOME/.local/" 2>/dev/null
         chmod -R 755 "$HOME/.config/GIMP" > /dev/null 2>&1
         chmod -R 755 "$HOME/.local/share/gimp" > /dev/null 2>&1
     } &
@@ -224,21 +224,33 @@ else
 fi
 sleep 2
 
-# 6. Limpeza restrita e segura: remove apenas 'instalador' e 'instalador.zip' se existirem localmente
+# 6. Limpeza completa: remove a pasta 'instalador' e o ficheiro 'instalador.zip' na pasta externa/pai
 enviar_notificacao "Passo 6/6" "Limpando ficheiros temporários de instalação..."
+PASTA_PAI="$(dirname "$PASTA_ATUAL")"
+
 if [ "$EXIBIR_LOGS" = true ]; then
     cd "$HOME"
-    [ -d "$PASTA_ATUAL/instalador" ] && rm -rf "$PASTA_ATUAL/instalador"
+    # Procura e remove o arquivo instalador.zip na pasta pai e na pasta Downloads
+    [ -f "$PASTA_PAI/instalador.zip" ] && rm -f "$PASTA_PAI/instalador.zip"
     [ -f "$PASTA_ATUAL/instalador.zip" ] && rm -f "$PASTA_ATUAL/instalador.zip"
+    [ -f "$HOME/Downloads/instalador.zip" ] && rm -f "$HOME/Downloads/instalador.zip"
+    
+    # Remove a pasta instalador (ou a pasta atual se ela for a instalador)
+    [ -d "$PASTA_PAI/instalador" ] && rm -rf "$PASTA_PAI/instalador"
     [[ "$PASTA_ATUAL" == *"/instalador"* ]] && rm -rf "$PASTA_ATUAL"
 else
     {
         cd "$HOME"
-        [ -d "$PASTA_ATUAL/instalador" ] && rm -rf "$PASTA_ATUAL/instalador" > /dev/null 2>&1
+        # Procura e remove o arquivo instalador.zip na pasta pai e na pasta Downloads
+        [ -f "$PASTA_PAI/instalador.zip" ] && rm -f "$PASTA_PAI/instalador.zip" > /dev/null 2>&1
         [ -f "$PASTA_ATUAL/instalador.zip" ] && rm -f "$PASTA_ATUAL/instalador.zip" > /dev/null 2>&1
+        [ -f "$HOME/Downloads/instalador.zip" ] && rm -f "$HOME/Downloads/instalador.zip" > /dev/null 2>&1
+
+        # Remove a pasta instalador (ou a pasta atual se ela for a instalador)
+        [ -d "$PASTA_PAI/instalador" ] && rm -rf "$PASTA_PAI/instalador" > /dev/null 2>&1
         [[ "$PASTA_ATUAL" == *"/instalador"* ]] && rm -rf "$PASTA_ATUAL" > /dev/null 2>&1
     } &
-    executar_com_spinner "A remover a pasta 'instalador' e 'instalador.zip'" $!
+    executar_com_spinner "A remover a pasta 'instalador' e o arquivo 'instalador.zip'" $!
 fi
 
 # Notificação Final
